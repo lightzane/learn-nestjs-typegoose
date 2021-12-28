@@ -9,6 +9,8 @@ npm i @nestjs/mongoose mongoose nestjs-typegoose @typegoose/typegoose
 ```bash
 npm i class-validator class-transformer
 npm i @nestjs/config
+npm i @nestjs/swagger
+npm i swagger-ui-express
 ```
 
 ## Description

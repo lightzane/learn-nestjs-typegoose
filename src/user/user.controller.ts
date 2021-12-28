@@ -1,8 +1,10 @@
 import { Body, Controller, Delete, Get, Logger, Param, Patch, Post } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { User } from './model/user.dto';
 import { UserService } from './user.service';
 
 @Controller('user')
+@ApiTags('user')
 export class UserController {
 
     logger: Logger;

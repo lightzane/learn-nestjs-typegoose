@@ -4,6 +4,7 @@ import { TypegooseModule } from 'nestjs-typegoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
+import { MovieModule } from './movie/movie.module';
 
 @Module({
   imports: [
@@ -18,7 +19,8 @@ import { UserModule } from './user/user.module';
       }),
       inject: [ConfigService]
     }),
-    UserModule
+    UserModule,
+    MovieModule
   ],
   controllers: [AppController],
   providers: [AppService],
