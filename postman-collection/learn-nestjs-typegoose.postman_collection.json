@@ -212,6 +212,94 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "movie",
+			"item": [
+				{
+					"name": "create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status is 201', () => {\r",
+									"    pm.response.to.have.status(201)\r",
+									"    pm.response.to.have.status('Created')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Love Hard\",\r\n    \"genre\": [\"Comedy\", \"Feel Good\", \"Romance\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movie/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movie",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pipe",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status is 201', () => {\r",
+									"    pm.response.to.have.status(201)\r",
+									"    pm.response.to.have.status('Created')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movie/test/33456",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movie",
+								"test",
+								"33456"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
