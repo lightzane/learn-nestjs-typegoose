@@ -12,7 +12,7 @@ import { UserModule } from './user/user.module';
       isGlobal: true,
     }),
     TypegooseModule.forRootAsync({
-      imports: [ConfigService],
+      // imports: [ConfigService], // Should be removed in Nest v8+
       useFactory: async (configService: ConfigService) => ({
         uri: encodeURI(configService.get('MONGO_CONNECTION')),
       }),
