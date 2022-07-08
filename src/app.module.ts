@@ -18,6 +18,13 @@ import { UserModule } from './user/user.module';
       }),
       inject: [ConfigService]
     }),
+    // TypegooseModule.forRootAsync({
+    //   connectionName: 'other-mongodb', // for multiple connection (see user.module.ts:10)
+    //   useFactory: async (configService: ConfigService) => ({
+    //     uri: configService.get('OTHER_MONGO_CONNECTION'),
+    //   }),
+    //   inject: [ConfigService]
+    // }),
     UserModule
   ],
   controllers: [AppController],
